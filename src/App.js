@@ -9,7 +9,7 @@ function App() {
        <Navbar/>
       <Routes>
         <Route path='/' element={ <CardsList/>}/>
-        <Route path='/product/:productId' element={ <OneCard/>}/>
+        <Route path='/products/:productId' element={ <OneCard/>}/>
       </Routes>
      
       

@@ -1,4 +1,3 @@
-import axios from "axios";
 import React from "react";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
@@ -7,7 +6,7 @@ function Cards() {
   const products = useSelector((state) => state.allproducts.products);
   const rednderList=products.map((product)=>{
     return( 
-    <Link to={`product/${product.id}`} key={product.id}>
+    <Link to={`products/${product.id}`} key={product.id}>
     <div className="rounded overflow-hidden shadow-lg" >
       <div className="flex justify-center">
       <img className="w-40 " src={product.image} alt="Mountain"/>
@@ -15,7 +14,7 @@ function Cards() {
       <div className="px-6 py-4">
         <div className="font-bold text-xl mb-2 text-center">{product.title}</div>
         <p className="text-gray-700 text-base text-center">
-          {product.description}
+          {product.category}
         </p>
       </div>
       <div className="px-6 pt-4 pb-2 text-center">
